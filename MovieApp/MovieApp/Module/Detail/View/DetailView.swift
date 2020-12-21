@@ -65,6 +65,7 @@ struct DetailView: View {
                 rating
               }
             }
+            .padding(.trailing, 20)
             .offset(x: 20, y: UIScreen.main.bounds.height / 2.5 - 40)
             
           }

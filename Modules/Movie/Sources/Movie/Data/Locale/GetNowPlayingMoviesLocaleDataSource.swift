@@ -56,46 +56,10 @@ public struct GetNowPlayingMoviesLocaleDataSource: LocaleDataSource {
     }
     
     public func get(id: String) -> AnyPublisher<MovieEntity, Error> {
-        return Future<MovieEntity, Error> { completion in
-            let movies: Results<MovieEntity> = {
-                _realm.objects(MovieEntity.self)
-                    .filter("id = '\(id)'")
-            }()
-            
-            guard let movie = movies.first else {
-                completion(.failure(DatabaseError.requestFailed))
-                return
-            }
-            completion(.success(movie))
-        }.eraseToAnyPublisher()
+        fatalError()
     }
     
     public func update(id: String, entity: MovieEntity) -> AnyPublisher<Bool, Error> {
-        return Future<Bool, Error> { completion in
-            if let movieEntity = {
-                _realm.objects(MovieEntity.self).filter("id = '\(id)'")
-            }().first {
-                do {
-                    try _realm.write {
-                        movieEntity.setValue(entity.title, forKey: "title")
-                        movieEntity.setValue(entity.backdropPath, forKey: "backdropPath")
-                        movieEntity.setValue(entity.posterPath, forKey: "posterPath")
-                        movieEntity.setValue(entity.overview, forKey: "overview")
-                        movieEntity.setValue(entity.voteAverage, forKey: "voteAverage")
-                        movieEntity.setValue(entity.voteCount, forKey: "voteCount")
-                        movieEntity.setValue(entity.runtime, forKey: "runtime")
-                        movieEntity.setValue(entity.releaseDate, forKey: "releaseDate")
-                        movieEntity.setValue(entity.isFavorite, forKey: "isFavorite")
-                        movieEntity.setValue(entity.genres, forKey: "genres")
-                    }
-                    completion(.success(true))
-                    
-                } catch {
-                    completion(.failure(DatabaseError.requestFailed))
-                }
-            } else {
-                completion(.failure(DatabaseError.invalidInstance))
-            }
-        }.eraseToAnyPublisher()
+        fatalError()
     }
 }
