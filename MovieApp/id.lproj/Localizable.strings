@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Nanang Sutisna on 21/12/20.
+  
+*/
+"popular_text" = "Populer";
+"search_text" = "Cari...";
+"favorite_text" = "Favorit";
+"overview_text" = "Gambaran";
+"casts_text" = "Pemeran";
+"crews_text" = "Kru Film";
+"followers_text" = "Pengikut";
+"following_text" = "Mengikuti";
+"loading_text" = "Memuat...";
+"no_favorite_text" = "Belum ada film favorit";
+"no_movies_text" = "Tidak ada film ditemukan";

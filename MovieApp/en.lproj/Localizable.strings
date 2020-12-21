@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Nanang Sutisna on 21/12/20.
+  
+*/
+"popular_text" = "Popular";
+"search_text" = "Search...";
+"favorite_text" = "Favorite";
+"overview_text" = "Overview";
+"casts_text" = "Casts";
+"crews_text" = "Crews";
+"followers_text" = "Followers";
+"following_text" = "Following";
+"loading_text" = "Loading...";
+"no_favorite_text" = "No favorite Movies Yet";
+"no_movies_text" = "No movies found";
